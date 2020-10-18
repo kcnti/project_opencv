@@ -1,2 +1,2 @@
 # project_opencv
-project e-ai major
+โปรเจคส่งงานเอก E-AI
