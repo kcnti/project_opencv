@@ -6,10 +6,10 @@ _fname, _lname, _gate, _terminal, _seat = ([] for i in range(5))
 def insert():
     try:
         cnx = mysql.connector.connect(
-            host='178.128.58.79',
-            user='project',
-            password='Kikuanone1234!',
-            database='project'
+            host='host',
+            user='user',
+            password='password',
+            database='db_name'
         )
         _id = cnx.cursor()
         ids = ("SELECT id, firstname FROM info")
@@ -42,10 +42,10 @@ def insert():
 
 def queryDB():
     global _fname, _lname, _gate, _terminal, _seat
-    cnx = mysql.connector.connect(  host='178.128.58.79',
-                                user='project',
-                                password='Kikuanone1234!',
-                                database='project'  )
+    cnx = mysql.connector.connect(  host='host',
+                                user='user',
+                                password='password',
+                                database='db_name'  )
     cursor = cnx.cursor()
     query = ("SELECT firstname, lastname, gate, terminal, seat FROM info")
     cursor.execute(query)
